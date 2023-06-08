@@ -1,0 +1,217 @@
+:root{
+  --font-1:'Inter', sans-serif;
+  --font-2:'Lexend Deca', sans-serif;
+  --back-cls:hsla(277, 100%, 35%, 50%);
+}
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+body{
+  color: white ;
+  font-size: 15px;
+  background:hsl(233, 47%, 7%) ;
+}
+.container{
+ padding-left: 15px; 
+ padding-right: 15px;
+ margin-right: auto; 
+ margin-left: auto; 
+
+}
+
+@media (min-width: 768px){
+  .container{
+    width: 750px;
+  }
+  
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* Start Images & Grid*/
+.componet{
+  margin-top: 50%;
+  padding:20px 60px;
+  
+}
+.componet .container {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  
+}
+.componet .container .responsive-img{
+  display: none;
+}
+.componet .img {
+   background-image: url('/images/image-header-desktop.jpg');
+   background-size: cover;
+   background-position: center;
+   width:100%;
+   height:100%;
+   border-top-right-radius: 10px;
+   border-bottom-right-radius: 10px;
+}
+.componet .img{
+  position: relative;
+  padding-right: 100px;
+
+}
+.componet .img::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--back-cls);
+  z-index: 99;
+  overflow: hidden;
+}
+/* End Images & Grid*/
+/* Start Analysis*/
+.componet .content{
+  background-color: hsl(244, 38%, 16%);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.componet .content .info{
+  padding: 40px 20px;
+  margin: 0 auto;
+  width: 85%;
+}
+.componet .content h2{
+  font-size: 24px;
+  font-family: var(--font-2)
+}
+.componet .content h2 span{
+  color:hsl(277, 64%, 61%);
+}
+.componet .content .sta{
+  width:90%;
+  margin: 20px 0;
+  font-size: 10px;
+  line-height: 1.6;
+  color:hsla(0, 0%, 100%, 0.75) ;
+  font-family: var(--font-1)
+}
+
+.componet .analy{
+  font-family: var(--font-1);
+  position: relative;
+  bottom: -30px;
+  left:0;
+  margin: 0 auto;
+  font-size: 14px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  grid-gap: 20px;
+}
+
+.componet .analy h3{
+  line-height: 0px;
+  text-transform: uppercase;
+  font-family: var(--font-1);
+  font-weight: 700;
+}
+.componet .analy p{
+  padding-top: 15px;
+  line-height: 1.6;
+  font-size: 10px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  color: hsla(0, 0%, 100%, 0.6);
+  font-family: var(--font-2)
+}
+@media (max-width:767px){
+  .componet {
+    text-align: center;
+    padding:30px;
+    margin:0;
+    width:100%;
+  }
+  .componet .container .responsive-img{
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 999;
+  }
+ .responsive-img img{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    overflow: hidden;
+ }
+ .content{
+    border-bottom-right-radius: 10px;
+
+ }
+ .container .content .info .sta {
+   text-align: center;
+   display: block;
+   margin: 10px  auto 0;
+   width:100%;
+ }
+ .container .content .info p{
+   font-size: .9rem
+ }
+ .componet .container .responsive-img::before{
+    content: '';
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    height:100%;
+    background-color:var(--back-cls);
+  }
+  .componet .container{
+    display:flex;
+    flex-direction: column;
+    padding:0;
+    margin:0;
+  }
+  .componet .container .content{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    width: 100%;
+    padding: 0;
+    margin:0;
+    
+  }
+  .componet .img {
+    display: none;
+  }
+  .componet .analy {
+    display: flex;
+    width: 100%;
+    font-size: 17px;
+    align-items: center;
+    flex-direction: column
+
+  }
+  .analy div {
+    padding-top: 20px
+  }
+  .componet .analy h3{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column
+  }
+  .componet .analy p{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+
+  }
+}
+/* End Analysis*/
