@@ -54,7 +54,7 @@ body{
   display: none;
 }
 .componet .img {
-   background-image: url('/images/image-header-desktop.jpg');
+   background-image: url('/stats-preview-card-component-main/images/image-header-desktop.jpg');
    background-size: cover;
    background-position: center;
    width:100%;
